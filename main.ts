@@ -2,11 +2,12 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 // The Printer Apology — one line, written by the printer itself.
-// Draft v2 (revised): tightened so the punch word lands at the very
-// end — the apology pivots into a quiet threat about the staple,
-// and the last word is the threat itself.
+// Draft v3 (revised): the punch is a near-miss, not an escalation —
+// the jam was an attempted hit on the staple that nearly succeeded,
+// so the last words land the joke turn ("almost had it") instead of
+// repeating the "aim" root.
 const line =
-  "Sorry about the jam — I was aiming for the staple you left inside me, and my aim keeps getting sharper.";
+  "Sorry about the jam — I was aiming for the staple you left inside me, and I almost had it that time.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
